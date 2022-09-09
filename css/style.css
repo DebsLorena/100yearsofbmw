@@ -1,0 +1,232 @@
+@import url(./variables.css);
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*page*/
+html{
+    font-family: var(--ff-dosis-sans);
+    font-size: var(--fs-regular);
+
+}
+
+li {list-style: none;}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--white);
+}
+
+/*headings*/
+h1, h2, h3 {
+    font-family: var(--ff-roboto);
+    font-weight: var(--fw-300);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.main-container {
+    max-width: 1440px;
+    margin: auto;
+    background: var(--white);
+}
+
+header{
+    background: #0006 url(../image/desktop/bmw-5-series-history-1.jpg) no-repeat center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding: 65px var(--px);
+    margin-bottom: var(--mb);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.mobile-nav-brand {
+    cursor: pointer;
+    display: none;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(min-content, min-content));
+    grid-gap: 32px;
+
+}
+
+nav ul li { 
+    position: relative;
+}
+
+nav ul li::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transform: translatex(-50%);
+    background: var(--white);
+}
+
+nav ul li:hover::after{
+    width: 25px;
+}
+
+.nav-toggler {
+    cursor: pointer;
+    display: none;
+}
+
+.banner h1 {
+    max-width: 650px;
+    padding: 38px;
+    margin-bottom: 80px;
+    border: 3px solid var(--white);
+    font-size: var(--fs-h1);
+    color: var(--white);
+}
+
+.about {
+    position: relative;
+    padding: 0 var(--px);
+    margin-bottom: var(--mb);
+}
+
+.about .img-box img { 
+    display: block;
+}
+
+.about .content-box {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    padding: 95px;
+    max-width: 640px;
+    background: var(--white);
+}
+
+
+.about .content-box h2{
+    font-size: var(--fs-h2);
+    margin-bottom: 30px;
+}
+
+.about .content-box p {
+    color: var(--dark-gray);
+    line-height: 1.7;
+}
+
+.product {
+    position: relative;
+    padding: 0 var(--px);
+    margin-bottom: var(--mb);
+}
+
+.product h2 {
+    font-size: var(--fs-h2);
+    margin-bottom: 80px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    place-content: center;
+    grid-gap:30px;
+}
+
+.product-card {
+    position: relative;
+    height: 450px;
+    cursor: pointer;
+}
+
+.product-card img{ 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+.product-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, #000b);
+    
+}
+
+.product-card:hover::after {
+    background: linear-gradient(180deg, #fffa 40%, #555a);
+}
+
+.product-card h3 {
+    position: absolute;
+    bottom: 35px;
+    left: 40px;
+    font-size: var(--fs-h3);
+    color: var(--white);
+    z-index: 5;
+}
+
+.product-card:hover h3 {
+    color: var(--black);
+}
+
+.btn-primary {
+    position: absolute;
+    right: var(--px);
+    top: 5px;
+    padding: 8px 35px;
+    letter-spacing: 5px;
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
+.btn-primary:hover{
+    color: var(--white);
+    background: var(--black);
+}
+
+footer {
+    background: var(--black);
+    padding: 45px var(--px);
+    display: flex;
+    justify-content: space-between;
+}
+.footer-brand {
+    margin-bottom: 20px;
+}
+
+.footer-brand img { 
+    max-width: 140px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    font-size: 1.8em;
+    color: var(--white);
+}
+
+.social-links a:not(:last-child) {
+    margin-right: 12px;
+}
+
+.copyright {
+    color: var(--very--dark--gray);
+}
